@@ -1,20 +1,13 @@
 .header {
-    align-items: center;
-}
-
-.header a {
-    align-items: center;
-    text-decoration: none;
+    display: flow-root;
+    padding: 10px 15px;
+    height: 60px;
 }
 
 .header .logo {
     max-height: 32px;
 }
 
-.header .title-group {
-    padding-left: 25px;
-}
-
-.header .title-group i {
-    padding-right: 25px;
+.menu {
+    float: right;
 }

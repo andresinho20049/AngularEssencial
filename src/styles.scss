@@ -26,7 +26,7 @@ body { font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 $light-app-theme: mat-light-theme((
         color: (
-                primary: mat-palette($mat-indigo),
+                primary: mat-palette($mat-cyan),
                 accent: mat-palette($mat-pink, A200, A100, A400),
                 warn: mat-palette($mat-red),
         )

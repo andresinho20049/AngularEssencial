@@ -1,29 +1,31 @@
+import { HostBinding } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
-import { HeaderService } from './header.service';
+import { ThemeService } from 'src/app/services/themeService';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
+  styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+  
+  hasToggledTheme = true;
+  currentTheme = '';
+  @HostBinding('class') componentCssClass: any;
 
-  constructor(private headerService: HeaderService) { 
+  constructor(private themeService: ThemeService) { 
   }
 
   ngOnInit(): void {
   }
 
-  get title(): string {
-    return this.headerService.headerData.title;
-  }
+  toggle() {
+    this.hasToggledTheme = !this.hasToggledTheme;
 
-  get icon(): string {
-    return this.headerService.headerData.icon;
-  }
+    this.currentTheme = this.hasToggledTheme?'light-theme':'dark-theme';
+    this.themeService.theme.next(this.currentTheme);
 
-  get routeUrl(): string {
-    return this.headerService.headerData.routeUrl;
+    console.log(this.currentTheme);
   }
 
 

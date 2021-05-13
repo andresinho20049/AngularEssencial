@@ -4,12 +4,15 @@
             <img class="logo" src="assets/img/logo.png" alt="logo">
         </a>
     </span>
-    <span class="title-group">
-        <a routerLink="{{routeUrl}}">
-            <i class="material-icons">
-                {{icon}}
-            </i>
-            {{title}}
-        </a>
-    </span>
+
+    <div class="menu">
+        <button mat-icon-button [matMenuTriggerFor]="moreMenu">
+            <i class="material-icons">more_vert</i>
+        </button>
+        <mat-menu #moreMenu="matMenu">
+            <button mat-menu-item>
+                Theme <mat-slide-toggle (change)="toggle()"></mat-slide-toggle>
+            </button>
+        </mat-menu>
+    </div>
 </mat-toolbar>
