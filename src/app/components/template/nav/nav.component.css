@@ -1,0 +1,28 @@
+.main {
+    flex: 1 1 auto;
+    display: block;
+    background-color: #303030;
+    /* position: inherit; */
+    min-height: 81.1%;
+}
+
+.sidenav {
+    background-color: #222222;
+    width: 200px;
+    position: absolute;
+    /* margin-top: 60px; */
+    min-height: 100%;
+}
+
+.sidenav a {
+    color: #fff;
+}
+
+.sidenav i {
+    padding-right: 10px;
+}
+
+.content {
+    padding: 16px;
+    overflow: unset;
+}
