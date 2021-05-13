@@ -3,7 +3,7 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { map } from 'rxjs/operators';
 import { Observable, of as observableOf, merge } from 'rxjs';
-import { Product } from '../product.model';
+import { Product } from 'src/app/models/product.model';
 
 export class ProductReadDataSource extends DataSource<Product> {
   data: Product[] = [];
