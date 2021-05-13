@@ -1,0 +1,49 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { box-sizing: border-box; display: block; position: relative; margin: 0; padding: 0; height: 100% !important;}
+body { font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.red {
+    color: #e35e6b;
+}
+
+.v-middle {
+    vertical-align: middle;
+}
+
+.msg-sucess {
+    background-color: #28a745;
+    color: #fff
+}
+
+.msg-error {
+    background-color: #e35e6b;
+    color: #fff
+}
+
+@import '~@angular/material/theming';
+@include mat-core();
+
+$light-app-theme: mat-light-theme((
+        color: (
+                primary: mat-palette($mat-indigo),
+                accent: mat-palette($mat-pink, A200, A100, A400),
+                warn: mat-palette($mat-red),
+        )
+));
+
+$dark-app-theme:   mat-dark-theme((
+        color: (
+                primary: mat-palette($mat-cyan),
+                accent: mat-palette($mat-blue-gray, A200, A100, A400),
+                warn: mat-palette($mat-amber),
+        )
+));
+
+.light-theme{
+    @include angular-material-theme($light-app-theme);
+}
+
+.dark-theme {
+    @include angular-material-color($dark-app-theme);
+}
